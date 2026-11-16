@@ -1,0 +1,21 @@
+[Unit]
+Description=GmCat Pawste (private paste bin at tools.gmcat.io/pawste)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/gmcat-pawste/server.py
+Environment=PAWSTE_DATA=/var/lib/gmcat-pawste
+Environment=PAWSTE_PORT=4198
+Environment=PAWSTE_CAP_MB=2048
+User=www-data
+Group=www-data
+Restart=on-failure
+MemoryMax=96M
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/gmcat-pawste
+
+[Install]
+WantedBy=multi-user.target
