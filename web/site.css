@@ -255,6 +255,15 @@ html[data-site="tools"][data-theme="dark"] { --tk-key: #f28fb0; --tk-str: #9fe0a
 .pw-banner { margin: 10px clamp(16px, 3vw, 28px) 0; padding: 10px 14px; border-radius: 10px; background: color-mix(in srgb, var(--pink) 12%, transparent); border: 1px solid color-mix(in srgb, var(--pink) 40%, transparent); font-weight: 600; font-size: 15px; }
 .pw-toolbar { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px clamp(16px, 3vw, 28px); }
 .pw-toolbar .btn { min-height: 38px; padding: 0 13px; font-size: 14px; }
+.pw-more { display: contents; }
+.pw-more-btn { display: none !important; }
+@media (max-width: 640px) {
+  .pw-toolbar { position: relative; }
+  .pw-more-btn { display: inline-flex !important; }
+  .pw-more-btn[aria-expanded="true"] .nav-caret { transform: translateY(1px) rotate(225deg); }
+  .pw-more { display: none; }
+  .pw-more.open { display: flex; flex-wrap: wrap; gap: 8px; flex-basis: 100%; padding-top: 4px; }
+}
 .pw-toolbar .btn[aria-pressed="true"] { border-color: var(--orange); background: color-mix(in srgb, var(--orange) 14%, transparent); }
 .pw-linehint { margin: 0 clamp(16px, 3vw, 28px) 10px; }
 .pw-body { border-top: 1px solid var(--line); background: var(--panel2); }

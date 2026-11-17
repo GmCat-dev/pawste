@@ -83,6 +83,22 @@ img { max-width: 100%; height: auto; }
 .site-nav a { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--cream); }
 .site-nav a[aria-current="page"] { box-shadow: 0 2px 0 var(--orange); }
+/* Top-bar drop-down menu (build.nav_item): one tidy row on phones however many pages a site has */
+.nav-menu { position: relative; }
+.nav-menu > summary { display: inline-flex; align-items: center; gap: 7px; list-style: none; cursor: pointer; color: var(--muted);
+  font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 4px 0; }
+.nav-menu > summary::-webkit-details-marker { display: none; }
+.nav-menu > summary:hover, .nav-menu[open] > summary, .nav-menu > summary.is-current { color: var(--cream); }
+.nav-menu > summary.is-current span:first-child { box-shadow: 0 2px 0 var(--orange); }
+.nav-caret { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .15s; }
+.nav-menu[open] .nav-caret { transform: translateY(1px) rotate(225deg); }
+.nav-pop { position: absolute; z-index: 50; top: calc(100% + 10px); right: 0; min-width: 230px; max-width: calc(100vw - 40px); max-height: 70vh; overflow-y: auto;
+  display: flex; flex-direction: column; padding: 8px; border-radius: 14px; border: 1px solid var(--line);
+  background: var(--panel, var(--bg)); box-shadow: 4px 4px 0 var(--shadow), 0 12px 30px rgba(0,0,0,.14); }
+.site-nav .nav-pop a { padding: 11px 12px; border-radius: 9px; font-size: 13px; letter-spacing: .04em; color: var(--cream); }
+.site-nav .nav-pop a:hover { background: var(--tint); }
+.site-nav .nav-pop a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--orange); background: var(--tint); }
+@media (max-width: 560px) { .site-nav { position: relative; gap: 6px 18px; } .nav-menu { position: static; } .nav-pop { left: 0; right: 0; min-width: 0; max-width: none; top: calc(100% + 8px); } }
 
 main { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; flex: 1; }
 

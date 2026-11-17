@@ -170,6 +170,13 @@
   }
 
   /* ---------- toolbar ---------- */
+  // Phones: only Copy text / Copy link show; "More" opens the rest (Toolbox tidy, 2026-11-17). Desktop shows them all.
+  var moreBtn = $("pw-more-btn"), more = $("pw-more");
+  function setMore(open) { more.classList.toggle("open", open); moreBtn.setAttribute("aria-expanded", open ? "true" : "false"); }
+  moreBtn.addEventListener("click", function () { setMore(!more.classList.contains("open")); });
+  more.addEventListener("click", function (ev) { if (ev.target.closest(".btn") && ev.target.id !== "pw-wrap" && ev.target.id !== "pw-src") setMore(false); });
+  document.addEventListener("click", function (ev) { if (!ev.target.closest(".pw-toolbar")) setMore(false); });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape" && more.classList.contains("open")) { setMore(false); moreBtn.focus(); } });
   function currentLink() { return P.link(id, hash.key, lineFrag()); }
   $("pw-copy").addEventListener("click", function () {
     var b = this, t = doc.b;

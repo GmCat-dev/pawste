@@ -40,4 +40,12 @@
   window.addEventListener("pageshow", sync);
   document.addEventListener("visibilitychange", function () { if (!document.hidden) sync(); });
   document.addEventListener("click", function (ev) { if (ev.target.closest && ev.target.closest("[data-theme-toggle]")) toggle(); });
+  // Top-bar drop-down menus (build.nav_item): one open at a time; a tap outside or Escape closes them
+  function closeMenus(except) { document.querySelectorAll("details[data-nav-menu][open]").forEach(function (d) { if (d !== except) d.open = false; }); }
+  document.addEventListener("click", function (ev) { closeMenus(ev.target.closest ? ev.target.closest("details[data-nav-menu]") : null); });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key !== "Escape") return;
+    var d = document.querySelector("details[data-nav-menu][open]");
+    if (d) { d.open = false; d.querySelector("summary").focus(); }
+  });
 })();
