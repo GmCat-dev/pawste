@@ -17,8 +17,8 @@
 <meta property="og:image" content="https://paw.gmcat.io/img/share/pawste.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@GmCatIO">
-<link rel="stylesheet" href="/brand.css?v=202611170410">
-<link rel="stylesheet" href="/site.css?v=202611170410">
+<link rel="stylesheet" href="/brand.css?v=202611200317">
+<link rel="stylesheet" href="/site.css?v=202611200317">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pawste","item":"https://paw.gmcat.io/"},{"@type":"ListItem","position":2,"name":"Pawste from the command line","item":"https://paw.gmcat.io/cli/"}]},{"@type":"WebApplication","name":"Pawste from the command line","url":"https://paw.gmcat.io/cli/","description":"Share files and command output from your terminal with curl and get a short paw.gmcat.io link back. Leak Guard, raw links, no account or API key.","operatingSystem":"Any (web browser)","isAccessibleForFree":true,"browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","@id":"https://gmcat.io/#org","name":"GmCat","url":"https://gmcat.io/","logo":"https://home.gmcat.io/img/favicon.png","sameAs":["https://x.com/GmCatIO","https://discord.gg/GJVpjBjn3D"]},"applicationCategory":"DeveloperApplication"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is there a limit?","acceptedAnswer":{"@type":"Answer","text":"Each paste can be up to 512 KB of text. To keep things fair, each address can make up to 30 pastes an hour."}},{"@type":"Question","name":"Why aren't command-line pastes encrypted?","acceptedAnswer":{"@type":"Answer","text":"Private links are locked by the browser before they leave your device, which a plain curl can't do. So the command line uses short links, and Pawste labels them as not encrypted."}},{"@type":"Question","name":"Does it need an account or a key?","acceptedAnswer":{"@type":"Answer","text":"No. It's free, with no account and no API key."}},{"@type":"Question","name":"Can I use it in scripts and CI?","acceptedAnswer":{"@type":"Answer","text":"Yes. The reply is just the link on one line, so LINK=$(cmd | curl --data-binary @- -s https://paw.gmcat.io) works. Please don't use it to store logs that contain secrets."}}]}]}</script>
 
 <script>(function(){var t="light",m=document.cookie.match(/(?:^|; )gmcat-theme=(dark|light)/);if(m)t=m[1];else try{t=localStorage.getItem("gmcat-theme")==="dark"?"dark":"light"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
@@ -35,7 +35,7 @@
 </header>
 <main id="main">
 <section class="tool-head">
-  <span class="tool-icon big" aria-hidden="true">{}</span>
+  <a class="tool-icon big tool-home" href="/" aria-label="Pawste: new paste">{}</a>
   <div>
     <p class="eyebrow"><a href="/">Pawste</a> · Command line</p>
     <h1>Pawste from the command line</h1>
@@ -90,7 +90,7 @@ pawste -b notes.txt         # burn after reading</code></pre>
     <nav aria-label="GmCat network"><a href="https://home.gmcat.io/">All GmCat sites</a><a href="https://play.gmcat.io/">Play</a><a href="https://brain.gmcat.io/">Brain Brew</a><a href="https://art.gmcat.io/">Art</a><a href="https://blog.gmcat.io/">Blog</a><a href="https://apps.gmcat.io/">Apps</a><a href="https://tools.gmcat.io/">Tools</a><a href="https://drop.gmcat.io/">Drop</a><a href="https://ai.gmcat.io/">AI</a><a href="https://wallets.gmcat.io/">Wallets</a><a href="https://kind.gmcat.io/">Kindness</a><a href="https://support.gmcat.io/">Support</a><a href="https://gmcat.io/">GmCat.io</a></nav>
   </div>
 </footer>
-<script src="/insights.js?v=202611170410" data-site="paw" defer></script>
-<script src="/theme.js?v=202611170410" data-theme-js defer></script>
+<script src="/insights.js?v=202611200317" data-site="paw" defer></script>
+<script src="/theme.js?v=202611200317" data-theme-js defer></script>
 </body>
 </html>

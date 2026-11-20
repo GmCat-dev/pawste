@@ -11,7 +11,7 @@
   var HOME = location.pathname.indexOf("/pawste/") === 0 ? "/pawste/" : "/";
   var SECRET = $("pw-editor").dataset.preset === "secret";   // Secure Note page: always private, burn on
   if (SECRET) $("pw-kind").hidden = true;
-  function isShort() { var r = document.querySelector('input[name="pw-kind"]:checked'); return !!r && r.value === "short"; }
+  function isShort() { if (SECRET) return false; var r = document.querySelector('input[name="pw-kind"]:checked'); return !!r && r.value === "short"; }
   function labels() {
     var short = isShort() && !editing, pw = $("pw-usepw").checked;
     $("pw-pw-hint").textContent = short ? "Locks the short link after all: GmCat can't read it without the password. Pick a strong one." : "Readers need the link and the password";

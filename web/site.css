@@ -5,6 +5,10 @@
 .tool-icon.sym { font: 800 24px 'DM Sans', system-ui, sans-serif; }
 .tool-icon.big.sym { font-size: 32px; }
 .tool-icon.big { width: 72px; height: 72px; border-radius: 18px; font-size: 18px; }
+a.tool-home, a.tool-home:hover, a.tool-home:visited { color: var(--accent-ink); text-decoration: none; transition: transform .12s; }
+a.tool-home:hover { transform: translateY(-2px); }
+.tool-home-word { color: inherit; text-decoration: none; }
+.tool-home-word:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
 
 /* Index */
 .tools-hero { margin-bottom: 48px; }

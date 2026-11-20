@@ -17,8 +17,8 @@
 <meta property="og:image" content="https://paw.gmcat.io/img/share/pawste.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@GmCatIO">
-<link rel="stylesheet" href="/brand.css?v=202611170410">
-<link rel="stylesheet" href="/site.css?v=202611170410">
+<link rel="stylesheet" href="/brand.css?v=202611200317">
+<link rel="stylesheet" href="/site.css?v=202611200317">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pawste","item":"https://paw.gmcat.io/"},{"@type":"ListItem","position":2,"name":"How Pawste keeps pastes private","item":"https://paw.gmcat.io/security/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which encryption does Pawste use?","acceptedAnswer":{"@type":"Answer","text":"AES-256-GCM from the browser's Web Crypto, with a random 256-bit key per paste. Passwords are stretched with PBKDF2-SHA-256 (310,000 rounds on private links, 600,000 on short links)."}},{"@type":"Question","name":"Can GmCat recover a lost private link?","acceptedAnswer":{"@type":"Answer","text":"No. We never have the key, so nobody can open the paste without the full link."}},{"@type":"Question","name":"Do you sell data or show ads?","acceptedAnswer":{"@type":"Answer","text":"No ads, no selling, no account, and no tracking on paste pages."}}]}]}</script>
 
 <script>(function(){var t="light",m=document.cookie.match(/(?:^|; )gmcat-theme=(dark|light)/);if(m)t=m[1];else try{t=localStorage.getItem("gmcat-theme")==="dark"?"dark":"light"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
@@ -35,7 +35,7 @@
 </header>
 <main id="main">
 <section class="tool-head">
-  <span class="tool-icon big" aria-hidden="true">{}</span>
+  <a class="tool-icon big tool-home" href="/" aria-label="Pawste: new paste">{}</a>
   <div>
     <p class="eyebrow"><a href="/">Pawste</a> · Security</p>
     <h1>How Pawste keeps pastes private</h1>
@@ -45,7 +45,7 @@
 <section class="card tool-panel sec-page">
   <h2 class="panel-h">The short version</h2>
   <ul>
-    <li><b>Private links</b> (the default) are encrypted on your device. GmCat stores only scrambled text and can't read it.</li>
+    <li><b>Private links</b> are encrypted on your device. GmCat stores only scrambled text and can't read it.</li>
     <li><b>Short links</b> are not encrypted. Pawste says so wherever they appear. Use them for code and notes, not secrets.</li>
     <li><b>Short link + password</b> is encrypted with your password, so GmCat can't read it, but a weak password could be guessed.</li>
     <li>No ads, no account, no tracking on paste pages, and no IP addresses saved.</li>
@@ -99,7 +99,7 @@
     <nav aria-label="GmCat network"><a href="https://home.gmcat.io/">All GmCat sites</a><a href="https://play.gmcat.io/">Play</a><a href="https://brain.gmcat.io/">Brain Brew</a><a href="https://art.gmcat.io/">Art</a><a href="https://blog.gmcat.io/">Blog</a><a href="https://apps.gmcat.io/">Apps</a><a href="https://tools.gmcat.io/">Tools</a><a href="https://drop.gmcat.io/">Drop</a><a href="https://ai.gmcat.io/">AI</a><a href="https://wallets.gmcat.io/">Wallets</a><a href="https://kind.gmcat.io/">Kindness</a><a href="https://support.gmcat.io/">Support</a><a href="https://gmcat.io/">GmCat.io</a></nav>
   </div>
 </footer>
-<script src="/insights.js?v=202611170410" data-site="paw" defer></script>
-<script src="/theme.js?v=202611170410" data-theme-js defer></script>
+<script src="/insights.js?v=202611200317" data-site="paw" defer></script>
+<script src="/theme.js?v=202611200317" data-theme-js defer></script>
 </body>
 </html>

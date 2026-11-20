@@ -1,12 +1,12 @@
 # Pawste 🐾
 
 The code behind **[Pawste](https://paw.gmcat.io)**, a free paste bin from [GmCat](https://gmcat.io): no ads, no account,
-private by default.
+and a private link always one tap away.
 
 - **Private links** are encrypted in your browser (AES-256-GCM, Web Crypto). The key lives in the link after `#`, which
   browsers never send to a server, so the server only stores scrambled text.
-- **Short links** (`paw.gmcat.io/k7m2x9pq`) are optional and always labelled as not encrypted. Add a password and the
-  paste is locked with a key made from the password (PBKDF2-SHA-256, 600,000 rounds).
+- **Short links** (`paw.gmcat.io/k7m2x9pq`) are picked first for everyday code and notes, and always labelled as not
+  encrypted. Add a password and the paste is locked with a key made from the password (PBKDF2-SHA-256, 600,000 rounds).
 - **Leak Guard** spots passwords, API keys, private keys and card numbers before you share.
 - **Burn after reading** that chat-app link previews can't trigger, **edit history** with diffs, **line links**,
   **Markdown**, **code pictures** ([Code to Image](https://paw.gmcat.io/code-to-image/)) and **curl** support.
